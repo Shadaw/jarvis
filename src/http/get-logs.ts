@@ -17,17 +17,7 @@ interface getLogsResponse {
 }
 
 export async function getLogs() {
-  try {
-    const result = await axios.get<getLogsResponse>('/api/logs')
+  const { data } = await axios.get<getLogsResponse>('/api/logs')
 
-    return {
-      error: false,
-      data: result.data.data,
-    }
-  } catch (err) {
-    return {
-      error: true,
-      data: [],
-    }
-  }
+  return data.data
 }
