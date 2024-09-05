@@ -23,7 +23,7 @@ export async function addVisitor({
   birthdate,
 }: AddVisitorRequest) {
   try {
-    const result = await axios.post<Room[]>('/visitors', {
+    const result = await axios.post<Room[]>('/api/visitors', {
       name,
       cpf,
       destinationRoom,

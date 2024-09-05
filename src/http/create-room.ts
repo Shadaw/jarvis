@@ -14,7 +14,7 @@ interface ErrorResponse {
 
 export async function createRoom({ name, capacity }: CreateRoomRequest) {
   try {
-    const result = await axios.post<Room[]>('/rooms', {
+    const result = await axios.post<Room[]>('/api/rooms', {
       name,
       capacity,
     })

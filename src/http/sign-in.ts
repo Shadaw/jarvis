@@ -17,7 +17,7 @@ interface ErrorResponse {
 
 export async function signIn({ email, password }: SignInRequest) {
   try {
-    const result = await axios.post<SignInResponse>('/auth', {
+    const result = await axios.post<SignInResponse>('/api/auth', {
       email,
       password,
     })
