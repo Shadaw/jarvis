@@ -12,7 +12,7 @@ interface RemoveVisitorResponse {
 
 export async function removeVisitor({ visitorId }: RemoveVisitorRequest) {
   try {
-    const result = await axios.put<RemoveVisitorResponse>('/visitors', {
+    const result = await axios.put<RemoveVisitorResponse>('/api/visitors', {
       visitorId,
     })
 

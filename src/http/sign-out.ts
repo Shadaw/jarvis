@@ -14,7 +14,7 @@ interface SignUpResponse {
 
 export async function SignUp({ name, email, password }: SignUpRequest) {
   try {
-    const result = await axios.post<SignUpResponse>('/users', {
+    const result = await axios.post<SignUpResponse>('/api/users', {
       name,
       email,
       password,

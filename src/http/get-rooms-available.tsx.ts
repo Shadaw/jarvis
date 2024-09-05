@@ -6,7 +6,7 @@ interface getRoomsResponse {
 }
 
 export async function getRoomsAvailable() {
-  const { data } = await axios.get<getRoomsResponse[]>('/rooms-available')
+  const { data } = await axios.get<getRoomsResponse[]>('/api/rooms-available')
 
   return data
 }

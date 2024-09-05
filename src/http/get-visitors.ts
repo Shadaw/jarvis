@@ -19,7 +19,7 @@ interface SignUpResponse {
 }
 
 export async function getVisitors() {
-  const { data: response } = await axios.get<SignUpResponse>('/visitors')
+  const { data: response } = await axios.get<SignUpResponse>('/api/visitors')
 
   return response.data
 }

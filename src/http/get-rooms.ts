@@ -19,7 +19,7 @@ interface getRoomsResponse {
 }
 
 export async function getRooms() {
-  const { data } = await axios.get<getRoomsResponse>('/rooms')
+  const { data } = await axios.get<getRoomsResponse>('/api/rooms')
 
   return data.data
 }
